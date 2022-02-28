@@ -30,7 +30,6 @@ export class BoardComponent {
       console.log('Game terminated');
       return;
     }
-    console.log('***** click card', card);
     const result = this.game.flipCard(card);
     console.log('***** result', result);
     if (result === 'no-match') {
