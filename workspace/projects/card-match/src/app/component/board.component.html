@@ -1,0 +1,7 @@
+<div class="board-component">
+  <div fxLayout="row wrap" fxLayoutAlign="space-around center">
+    <ng-container *ngFor="let card of game.cards">
+      <img class="card" [ngClass]="{'cursor-pointer': !card.showFace}" (click)="clickCard(card)" [src]="card.cardImage">
+    </ng-container>
+  </div>
+</div>

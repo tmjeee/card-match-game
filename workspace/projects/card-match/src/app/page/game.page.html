@@ -1,0 +1,14 @@
+<div class="game-page">
+  <div *ngIf="timeout" fxLayout="row" fxLayoutAlign="center center">
+    <div class="notice">Timeout</div>
+  </div>
+  <div *ngIf="endGame" fxLayout="row" fxLayoutAlign="center center">
+    <div class="notice">Game ended</div>
+  </div>
+  <div fxLayout="row" fxLayoutAlign="center center">
+    <timer #timer="timerComponent" [timeout]="100" (events)="onTimerEvent($event)"></timer>
+  </div>
+  <div>
+    <board #board="boardComponent" (events)="onBoardEvent($event)" [game]="game"></board>
+  </div>
+</div>

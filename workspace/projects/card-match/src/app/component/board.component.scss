@@ -1,0 +1,9 @@
+.board-component {
+  .card {
+    margin: 10px;
+    width: 100px;
+    &.cursor-pointer {
+      cursor: pointer;
+    }
+  }
+}
